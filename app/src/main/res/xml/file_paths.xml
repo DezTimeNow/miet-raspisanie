@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Пути для FileProvider. Скачанный APK лежит в getExternalFilesDir(DOWNLOADS),
+  поэтому external-path нужен именно с префиксом Android/data/<package>/.
+
+  ВАЖНО: не раздавать корень "." — тогда другие приложения, получив content://,
+  смогут прочитать любой файл из доступных каталогов приложения. Отдаём ровно
+  ту папку, куда кладём обновление.
+-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="updates"
+        path="Download/" />
+    <cache-path
+        name="cache"
+        path="updates/" />
+</paths>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Адаптивная иконка. Фон — белый, поверх него логотип с прозрачными
+  вырезами внутри: под белым фоном они читаются как белые детали рисунка.
+
+  Логотип лежит отдельным слоем (foreground), а не впечатан в фон: так
+  маска лаунчера обрезает фон, а сам логотип остаётся целым. Ужать его
+  пришлось до 86dp из 108dp — иначе круглая маска срезала бы края круга.
+
+  Растр, а не вектор: исходник — изображение 7087x7087, вектор из него
+  не собрать.
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@mipmap/ic_launcher_fg" />
+</adaptive-icon>
